@@ -1,17 +1,17 @@
 export default {
     template:
     `
-    <section id="home">
+    <section id="aboutme">
         <h2 class="white-box">Qui suis-je ?</h2>
         <article>
-            <div>
+            <div class="profile">
                 <h4>AURORE VERNET</h4>
                 <div>
-                    <img src="">
-                    <div>
-                        <img src="">
-                        <span>Grenoble & périphéries / Lyon / Amiens</span>
-                    </div>
+                    <img src="./img/aurore.jpeg" class="picture">
+                    <span class="bloc-image">
+                        <img src="./img/icons/location.svg">
+                        <span class="light">Grenoble & périphéries / Lyon / Amiens</span>
+                    </span>
                 </div>
             </div>
             <div>
