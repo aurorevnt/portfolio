@@ -17,6 +17,12 @@ a {
     color: white;
 }
 
+h2 {
+    font-size: 35px;
+    justify-content: center;
+    width: fit-content;
+}
+
 .bold {
     font-weight: 700;
 }
