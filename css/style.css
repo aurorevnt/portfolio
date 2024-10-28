@@ -43,22 +43,20 @@ html {
     background-image: url(../img/pattern_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    padding: 5vh;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
+    gap: 7vh;
     font-family: 'Inria Sans';
     font-size: 20px;
     color: white;
-    height: 100%;
-    padding: 7vh;
 }
 
 .icon {
-    height: 25px;
+    height: 30px;
 }
 
 .white-box {
@@ -88,7 +86,6 @@ nav div {
 nav ul {
     display: flex;
     justify-content: center;
-    width: 100%;
     gap: 5vw;
     height: fit-content;
     background: linear-gradient(to right, rgba(153,153,153,0) 0%,rgba(214,214,214,0.05) 50%,rgba(229,229,229,0) 100%);
@@ -116,7 +113,7 @@ nav a:hover, nav a.router-link-active.router-link-exact-active  {
 
 #aboutme article {
     display: flex;
-    gap: 20px;
+    gap: 5vh;
 }
 
 /* Bloc nom sur le côté + image et loca */
@@ -144,6 +141,30 @@ nav a:hover, nav a.router-link-active.router-link-exact-active  {
 #aboutme article img.picture {
     height: 400px;
     box-shadow: 4px 4px white;
+}
+
+/* Bloc liste items + hobbies */
+#aboutme article .aboutme-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+#aboutme article .aboutme-infos div {
+    display: flex;
+    gap: 2vh;
+}
+
+/* Liste items */
+#aboutme article ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+/* Items liste infos */
+#aboutme article ul li {
+    list-style: url(../img/icons/chevron.svg);
 }
 
 
