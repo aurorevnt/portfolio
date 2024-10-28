@@ -41,8 +41,8 @@ h4 {
 
 html {
     background-image: url(../img/pattern_bg.png);
-    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding: 5vh;
 }
 
