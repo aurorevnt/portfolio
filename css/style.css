@@ -185,3 +185,9 @@ footer span {
     align-items: self-end;
     gap: 15px;
 }
+
+.line {
+    border-left: solid;
+    border-color: rgba(76, 76, 109, 0.25);
+    padding-left: 10px;
+}

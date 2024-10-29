@@ -9,6 +9,6 @@ export default {
                 <img src="./img/icons/linkedin.svg" alt="Logo LinkedIn">
             </a>
         </span>
-        <span class="light">© Aurore Vernet - 2024</span>
+        <span class="light line">Développé par Aurore Vernet - 2024</span>
     </div>`,
 }
