@@ -23,6 +23,11 @@ h2 {
     width: fit-content;
 }
 
+h3 {
+    font-size: 40px;
+    text-shadow: var(--main-color-shadow) 4px 4px;
+}
+
 h4 {
     font-size: 40px;
     writing-mode: vertical-rl;
@@ -36,6 +41,7 @@ h4 {
 
 .light {
     font-weight: 300;
+    font-size: 16px;
 }
 
 
@@ -68,6 +74,10 @@ body {
     height: fit-content;
     padding: 15px;
     box-shadow: var(--main-color-shadow) 4px 4px;
+}
+
+.img-illu {
+    box-shadow: 4px 4px white;
 }
 
 /* **************** Header **************** */
@@ -134,7 +144,6 @@ nav a:hover, nav a.router-link-active.router-link-exact-active  {
 #aboutme article .profile span {
     display: flex;
     gap: 5px;
-    font-size: 16px;
 }
 
 /* Image de moi */
@@ -164,7 +173,71 @@ nav a:hover, nav a.router-link-active.router-link-exact-active  {
 
 /* Items liste infos */
 #aboutme article ul li {
-    list-style: url(../img/icons/chevron.svg);
+    list-style: url(../img/icons/chevron-dark.svg);
+    padding-left: 1vw;
+}
+
+/* **************** Projects **************** */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+#legend-projects {
+    display: flex;
+    gap: 5vh;
+}
+
+#legend-projects div {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.project-cat {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    gap: 5vh;
+    background-color: rgba(255,255,255,0.05);
+}
+
+.project-cat-title {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.project-cat article {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+.project-cat article .img-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.project-cat article ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding-left: 1vw;
+}
+
+.project-cat article li {
+    padding-left: 1vw;
+    list-style: url(../img/icons/chevron-light.svg);
+}
+
+.project-cat article li img {
+    padding-right: 1vw;
 }
 
 

@@ -2,12 +2,17 @@ export default {
     template:
     `
     <section id="skills">
-        <div id=legend>
-            <div v-for="legend in legends">
-                <img :src="legend.path" :alt="legend.alt">
-                <span>{{legend.title}}</span>
+        <div>
+            <h2 class="white-box">Mes compétences</h2>
+            <p>Mon kit de compétences en développement mais aussi en design, affûté par la pratique et nourri par la curiosité !</p>
+            <div id=legend>
+                <div v-for="legend in legends">
+                    <img :src="legend.path" :alt="legend.alt">
+                    <span>{{legend.title}}</span>
+                </div>
             </div>
         </div>
+
         <section id="skills-items">
             <article id="skills-languages">
                 <h3 class="title">LANGAGES</h3>
@@ -58,7 +63,7 @@ export default {
                     title: 'Débutant'
                 },
                 {
-                    path: './img/skills/icon-mid.svg',
+                    path: './img/skills/icon-average.svg',
                     alt: 'Icône niveau intermédiaire',
                     title: 'Intermédiaire'
                 },
