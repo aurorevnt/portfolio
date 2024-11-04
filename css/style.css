@@ -203,6 +203,7 @@ nav a:hover, nav a.router-link-active.router-link-exact-active  {
     padding: 2vw;
     gap: 5vh;
     background-color: rgba(255,255,255,0.05);
+    width: 80%;
 }
 
 .project-cat-title {

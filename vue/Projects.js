@@ -76,6 +76,37 @@ export default {
                 </ul>
             </article>
         </section>
+        <section class="project-cat">
+            <div class="project-cat-title">
+                <img src="./img/icons/chevron-h3.svg">
+                <h3>Créations graphiques</h3>
+            </div>
+            <article v-for="project in projects_crea">
+                <h4>{{project.title}}</h4>
+                <div class="img-date">
+                    <a v-if="project.link != ''" :href="project.link" target="_blank">
+                        <img :src="project.path" :alt="project.alt" class="img-illu">
+                    </a>
+                    <img v-else :src="project.path" :alt="project.alt" class="img-illu">
+                    <span class="light">{{project.date}}</span>
+                </div>
+                <ul>
+                    <li class="bold">
+                        {{project.subtitle}}
+                    </li>
+                    <li>
+                        {{project.mission}}
+                    </li>
+                    <li>
+                        {{project.type}}
+                    </li>
+                    <li>
+                        <img v-for="tool in project.tools" :src="tool">
+                    </li>
+                    </li>
+                </ul>
+            </article>
+        </section>
     </section>
     `,
     props: ['link', 'path', 'alt', 'title', 'date', 'subtitle', 'mission', 'type', 'tools'],
@@ -135,7 +166,7 @@ export default {
             ],
             projects_design: [
                 {
-                    link: 'https://www.amienstapissier.fr/',
+                    link: '',
                     path: './img/projects/bouchendhomme.svg',
                     alt: 'Logo MAISON BOUCHENDHOMME',
                     title: 'MAISON',
@@ -166,23 +197,51 @@ export default {
                         './img/projects/logo-tools/figma.svg'
                     ]
                 },
+            ],
+            projects_crea: [
                 {
                     link: '',
-                    path: './img/projects/charrettes.svg',
-                    alt: 'Page accueil Shifumi Overwatch',
-                    title: 'SHIFUMI',
-                    date: 'décembre 2023',
-                    subtitle: "Création d'un Shifumi sur la thématique Overwatch",
-                    mission: "Imaginer un nouveau concept du jeu Pierre/Feuille/Ciseaux",
+                    path: './img/projects/yoto.svg',
+                    alt: 'Visu boîte à histoires Yoto',
+                    title: 'YOTO',
+                    date: 'octobre 2024',
+                    subtitle: "Modélisation d'un produit et création de visuels",
+                    mission: "Modéliser une boîte à histoires, produit phare de la marque Yoto, et créer des supports de communication",
                     type: "Projet individuel",
                     tools: [
-                        './img/projects/logo-tools/js.svg',
-                        './img/projects/logo-tools/html.svg',
-                        './img/projects/logo-tools/css.svg',
-                        './img/projects/logo-tools/figma.svg'
+                        './img/projects/logo-tools/blender.svg'
+                    ]
+                },
+                {
+                    link: '',
+                    path: './img/projects/pulpit.svg',
+                    alt: "Visu canettes Pulp'it",
+                    title: "PULP'IT",
+                    date: 'mars 2024',
+                    subtitle: "Conception de packagings",
+                    mission: "Créer l'identité d'une canette de soda, le visuel et l'habillage de son étiquette et de sa boîte",
+                    type: "Projet individuel",
+                    tools: [
+                        './img/projects/logo-tools/photoshop.svg',
+                        './img/projects/logo-tools/illustrator.svg',
+                        './img/projects/logo-tools/indesign.svg'
+                    ]
+                },
+                {
+                    link: 'https://www.parcoursmetiers.tv/video/15996-hacking-chez-adaube',
+                    path: './img/projects/concoursfilm.svg',
+                    alt: "Logo Je filme le métier qui me plait 2024",
+                    title: 'WEB',
+                    date: "novembre 2023 - janvier 2024",
+                    subtitle: 'Participation de ma promotion La Manu au concours "Je filme le métier qui me plaît" édition 2024',
+                    mission: "Réaliser une vidéo sur un métier auquel forme ma formation en incluant un préjugé sur celui-ci",
+                    type: "Projet d'équipe",
+                    tools: [
+                        './img/projects/logo-tools/premiere.svg',
+                        './img/projects/logo-tools/figma.svg',
                     ]
                 }
-            ]
+            ],
         }
     }
 }
