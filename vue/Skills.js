@@ -1,56 +1,41 @@
 export default {
     template:
     `
-    <section id="skills">
-        <div>
+    <section class="page">
+        <div class="top-page">
             <h2 class="white-box">Mes compétences</h2>
             <p>Mon kit de compétences en développement mais aussi en design, affûté par la pratique et nourri par la curiosité !</p>
-            <div id=legend>
+            <div class=legend>
                 <div v-for="legend in legends">
                     <img :src="legend.path" :alt="legend.alt">
                     <span>{{legend.title}}</span>
                 </div>
             </div>
         </div>
-
-        <section id="skills-items">
-            <article id="skills-languages">
-                <h3 class="title">LANGAGES</h3>
-                <div>
-                    <span v-for="language in languages">
-                        <a :href="language.link" target="_blank">
-                            <img :src="language.path" :alt="language.alt" :class="language.class">
-                        </a>
-                    </span>
-                </div>
-            </article>
-            <article id="skills-tools">
-                <h3 class="title">OUTILS</h3>
-                <div>
-                    <span v-for="tool in tools">
-                        <img :src="tool.path" :alt="tool.alt" :class="tool.class">
-                    </span>
-                </div>
-            </article>
-            <article id="skills-frameworks">
-                <h3 class="title">FRAMEWORKS</h3>
-                <div>
-                    <span v-for="framework in frameworks">
-                        <a :href="framework.link" target="u_blank">
-                            <img :src="framework.path" :alt="framework.alt" :class="framework.class">
-                        </a>
-                    </span>
-                </div>
-            </article>
-            <article class="skills-db">   
-                <h3 class="title">BASE DE DONNÉES</h3>
-                <div>
-                    <span v-for="database in databases">
-                        <img :src="database.path" :alt="database.alt" :class="database.class"
-                    </span>
-                </div>
-            </article>
-        </section>
+        <article class="skills-cat">
+            <h3>LANGAGES</h3>
+            <div class="skills-logos">
+                <img v-for="language in languages" :src="language.path" :alt="language.alt" :class="language.class">
+            </div>
+        </article>
+        <article class="skills-cat">
+            <h3 class="title">OUTILS</h3>
+            <div class="skills-logos">
+                <img v-for="tool in tools" :src="tool.path" :alt="tool.alt" :class="tool.class">
+            </div>
+        </article>
+        <article class="skills-cat">
+            <h3>FRAMEWORKS</h3>
+            <div class="skills-logos">
+                <img v-for="framework in frameworks" :src="framework.path" :alt="framework.alt" :class="framework.class">
+            </div>
+        </article>
+        <article class="skills-cat">   
+            <h3>BASE DE DONNÉES</h3>
+            <div class="skills-logos">
+                <img v-for="database in databases" :src="database.path" :alt="database.alt" :class="database.class"
+            </div>
+        </article>
     </section>
     `,
     props: ['path', 'alt', 'title', 'class'],
@@ -75,98 +60,71 @@ export default {
             ],
             languages: [
                 {
-                    path: './img/skills/logo-html.svg',
-                    alt: 'Logo HTML',
-                    link: 'https://auroreo.github.io/projet-bonappetit/',
-                    class: 'small-logo'
+                    path: './img/skills/logos-languages/html.svg',
+                    alt: "Logo HTML"
                 },
                 {
-                    path: './img/skills/logo-css.svg',
-                    alt: 'Logo CSS',
-                    class: 'small-logo'
+                    path: './img/skills/logos-languages/css.svg',
+                    alt: "Logo CSS"
                 },
                 {
-                    path: './img/skills/logo-python.svg',
-                    alt: 'Logo Python',
-                    class: 'small-logo'
+                    path: './img/skills/logos-languages/js.svg',
+                    alt: "Logo JavaScript"
                 },
                 {
-                    path: './img/skills/logo-js.svg',
-                    alt: 'Logo JS',
-                    link: 'https://auroreo.github.io/shifumi_overwatch/',
-                    class: 'small-logo'
+                    path: './img/skills/logos-languages/php.svg',
+                    alt: "Logo PHP"
                 },
                 {
-                    path: './img/skills/logo-php.svg',
-                    alt: 'Logo PHP',
-                    class: 'small-logo'
+                    path: './img/skills/logos-languages/python.svg',
+                    alt: "Logo Python"
+                },
+                {
+                    path: './img/skills/logos-languages/java.svg',
+                    alt: "Logo Java"
                 }
+
             ],
             tools: [
                 {
-                    path: './img/skills/logo-figma.svg',
-                    alt: 'Logo Figma',
-                    class: 'small-logo'
+                    path: './img/skills/logos-tools/figma.svg',
+                    alt: "Logo Figma"
                 },
                 {
-                    path: './img/skills/logo-illustrator.svg',
-                    alt: 'Logo Illustrator',
-                    class: 'small-logo'
+                    path: './img/skills/logos-tools/wordpress.svg',
+                    alt: "Logo WordPress"
                 },
                 {
-                    path: './img/skills/logo-premierepro.svg',
-                    alt: 'Logo Premiere Pro',
-                    class: 'small-logo'
+                    path: './img/skills/logos-tools/illustrator.svg',
+                    alt: "Logo Illustrator"
                 },
                 {
-                    path: './img/skills/logo-vscode.svg',
-                    alt: 'Logo VSCode',
-                    class: 'small-logo'
+                    path: './img/skills/logos-tools/indesign.svg',
+                    alt: "Logo inDesign"
                 },
                 {
-                    path: './img/skills/logo-wordpress.svg',
-                    alt: 'Logo WordPress',
-                    class: 'small-logo'
+                    path: './img/skills/logos-tools/photoshop.svg',
+                    alt: "Logo Photoshop"
                 },
                 {
-                    path: './img/skills/logo-photoshop.svg',
-                    alt: 'Logo Photoshop',
-                    class: 'small-logo'
-                },
-                {
-                    path: './img/skills/logo-indesign.svg',
-                    alt: 'Logo inDesign',
-                    class: 'small-logo'
-                },
-                {
-                    path: './img/skills/logo-trello.svg',
-                    alt: 'Logo Trello',
-                    class: 'small-logo'
-                },
-                {
-                    path: './img/skills/logo-phpmyadmin.svg',
-                    alt: 'Logo phMyAdmin',
-                    class: 'big-logo'
+                    path: './img/skills/logos-tools/blender.svg',
+                    alt: 'Logo Blender'
                 },
             ],
             frameworks: [
                 {
-                    path: './img/skills/logo-vuejs.svg',
-                    alt: 'Logo Vue.js',
-                    link: 'https://auroreo.github.io/ranking_of_films/',
-                    class: 'small-logo'
+                    path: './img/skills/logos-fw/vuejs.svg',
+                    alt: "Logo Vue.js"
                 },
                 {
-                    path: './img/skills/logo-bootstrap.svg',
-                    alt: 'Logo Bootstrap',
-                    class: 'small-logo'
+                    path: './img/skills/logos-fw/bootstrap.svg',
+                    alt: "Logo Bootstrap"
                 },
             ],
             databases: [
                 {
-                    path: './img/skills/logo-mysql.svg',
-                    alt: 'Logo MySQL',
-                    class: 'big-logo'
+                    path: './img/skills/logos-db/mysql.svg',
+                    alt: "Logo MySQL"
                 }
             ]
         }

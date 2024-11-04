@@ -1,10 +1,10 @@
 export default {
     template: 
     `
-    <section id="projects">
+    <section class="page">
         <h2 class="white-box">Mes projets</h2>
         <p>Depuis le début de mon aventure dans le web design, j'accumule des projets qui évoluent avec moi !</p>
-        <div id="legend-projects">
+        <div class="legend">
             <div>
                 <img src="./img/icons/proj-school.svg" class="icon">
                 <span>Scolaire</span>

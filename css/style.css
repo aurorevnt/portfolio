@@ -177,25 +177,40 @@ nav a:hover, nav a.router-link-active.router-link-exact-active  {
     padding-left: 1vw;
 }
 
-/* **************** Projects **************** */
+/* **************** All pages (for now: skills, projects **************** */
 
-#projects {
+.page, .top-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5vh;
 }
 
-#legend-projects {
+.legend {
     display: flex;
+    gap: 5vw;
+}
+
+.legend div {
+    display: flex;
+    gap: 1vw;
+}
+
+/* **************** Skills **************** */
+
+.skills-cat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 5vh;
 }
 
-#legend-projects div {
+.skills-logos {
     display: flex;
-    align-items: center;
-    gap: 1vw;
+    gap: 3vw;
 }
+
+/* **************** Projects **************** */
 
 .project-cat {
     display: flex;
