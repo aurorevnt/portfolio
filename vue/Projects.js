@@ -92,13 +92,8 @@ export default {
             <article v-for="project in projects_crea">
                 <h4>{{project.title}}</h4>
                 <div class="img-date">
-                    <a v-if="project.link != ''" :href="project.link" target="_blank">
-                        <div class="container-img">
-                            <img :src="project.path" :alt="project.alt" class="img-illu">
-                        </div>
-                    </a>
                     <div class="container-img">
-                        <img v-else :src="project.path" :alt="project.alt" class="img-illu">
+                        <img :src="project.path" :alt="project.alt" class="img-illu">
                     </div>
                     <span class="light">{{project.date}}</span>
                 </div>
