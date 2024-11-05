@@ -256,6 +256,14 @@ nav a:hover, nav a.router-link-active.router-link-exact-active  {
     padding-right: 1vw;
 }
 
+.container-img {
+    width: 400px;
+}
+
+.container-img img {
+    width: 100%;
+}
+
 
 /* **************** Footer **************** */
 

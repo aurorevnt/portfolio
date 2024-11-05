@@ -23,9 +23,13 @@ export default {
                 <h4>{{project.title}}</h4>
                 <div class="img-date">
                     <a v-if="project.link != ''" :href="project.link" target="_blank">
-                        <img :src="project.path" :alt="project.alt" class="img-illu">
+                        <div class="container-img">
+                            <img :src="project.path" :alt="project.alt" class="img-illu">
+                        </div>
                     </a>
-                    <img v-else :src="project.path" :alt="project.alt" class="img-illu">
+                    <div v-else class="container-img">
+                        <img :src="project.path" :alt="project.alt" class="img-illu">
+                    </div>
                     <span class="light">{{project.date}}</span>
                 </div>
                 <ul>
@@ -54,9 +58,13 @@ export default {
                 <h4>{{project.title}}</h4>
                 <div class="img-date">
                     <a v-if="project.link != ''" :href="project.link" target="_blank">
-                        <img :src="project.path" :alt="project.alt" class="img-illu">
+                        <div class="container-img">
+                            <img :src="project.path" :alt="project.alt" class="img-illu">
+                        </div>
                     </a>
-                    <img v-else :src="project.path" :alt="project.alt" class="img-illu">
+                    <div class="container-img">
+                        <img v-else :src="project.path" :alt="project.alt" class="img-illu">
+                    </div>
                     <span class="light">{{project.date}}</span>
                 </div>
                 <ul>
@@ -85,9 +93,13 @@ export default {
                 <h4>{{project.title}}</h4>
                 <div class="img-date">
                     <a v-if="project.link != ''" :href="project.link" target="_blank">
-                        <img :src="project.path" :alt="project.alt" class="img-illu">
+                        <div class="container-img">
+                            <img :src="project.path" :alt="project.alt" class="img-illu">
+                        </div>
                     </a>
-                    <img v-else :src="project.path" :alt="project.alt" class="img-illu">
+                    <div class="container-img">
+                        <img v-else :src="project.path" :alt="project.alt" class="img-illu">
+                    </div>
                     <span class="light">{{project.date}}</span>
                 </div>
                 <ul>
@@ -199,6 +211,19 @@ export default {
                 },
             ],
             projects_crea: [
+                {
+                    link: '',
+                    path: './img/projects/ghost-joker.png',
+                    alt: 'Visu petit fantôme',
+                    title: 'FANTÔME',
+                    date: 'novembre 2024',
+                    subtitle: "Modélisation et personnalisation d'un petit fantôme",
+                    mission: "Prise en main de la physique sous Blender",
+                    type: "Projet individuel",
+                    tools: [
+                        './img/projects/logo-tools/blender.svg'
+                    ]
+                },
                 {
                     link: '',
                     path: './img/projects/yoto.svg',
